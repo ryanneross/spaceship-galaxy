@@ -1,21 +1,31 @@
 let bg;
-let img;
+// let img;
 var x = 0;
 var y = 0;
 var w = 175;
 var h = 102;
+let ships = [];
+var s = 0;
+
+// function preload() {
+//   ships[0] = loadImage('assets/spaceship0.png');
+//   ships[1] = loadImage('assets/spaceship1.png');
+// }
 
 function setup() {
   // put setup code here
   bg = loadImage('assets/galaxy.jpg');
   createCanvas(1005,671);
-  img = loadImage('assets/spaceship.png');
+  // img = loadImage('assets/spaceship1.png');
+  ships[0] = loadImage('assets/spaceship0.png');
+  ships[1] = loadImage('assets/spaceship1.png');
 }
 
 function draw() {
   // put drawing code here
   background(bg);
-  image(img, x, y, w, h);
+  // image(img, x, y, w, h);
+  image(ships[s], x, y, w, h);
 
   if ( x > width) {
     x = 0;
@@ -46,10 +56,11 @@ function draw() {
   }
 }
 
-// function keyPressed() {
-//   if (keyCode === (32)) {
-//     for (let i = 0; i < numShips; i++) {
-//       ships [i] = loadImage("spaceship" + i + ".png");
-//   }
-// }
-// }
+function keyPressed() {
+  if (keyCode === (32)) {
+    s++;
+    if (s > 1) {
+      s = 0;
+    }
+}
+}
