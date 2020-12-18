@@ -1,0 +1,17 @@
+body {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10vh;
+    max-width: 960px;
+    background-color:#040404;
+}
+
+.border {
+    position: fixed;
+    top: 10vh;
+    width: 1005px;
+    height: 300;
+    margin-left: auto;
+}
+
